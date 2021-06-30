@@ -15,7 +15,7 @@ contract Transfer{
 
     mapping(uint => Profile) public maps;
 
-    function createProfile(string memory _name) public {
+    function createProfile(string memory _name) public returns ([address, string, uint]) {
         bool present = false;
         uint i = 0;
         for(i; i <= totalProfiles; i++){
